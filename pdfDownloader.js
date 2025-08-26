@@ -1,6 +1,12 @@
 (async function () {
-  // Tableau Extensions API başlat
-  await tableau.extensions.initializeAsync();
+  try {
+    // Tableau Extensions API başlat
+    await tableau.extensions.initializeAsync();
+  } catch (e) {
+    console.error("Extensions API init hatası:", e);
+    alert("Extensions API başlatılamadı.");
+    return;
+  }
 
   // Tüm worksheet isimlerini al
   const worksheets = tableau.extensions.dashboardContent.dashboard.worksheets;
