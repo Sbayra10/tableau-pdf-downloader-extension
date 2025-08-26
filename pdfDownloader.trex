@@ -1,16 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest manifest-version="1" xmlns="http://tableau.com/api/extension_manifest">
-  <dashboard-extension id="com.sezer.pdfdownloader" alias="PDF Downloader">
-    <version>1.0.0</version>
+<manifest manifest-version="1" xmlns="http://www.tableau.com/api/extension_manifest">
+  <dashboard-extension id="com.sezer.pdfdownloader" version="1.0.0">
+    <name>PDF Downloader</name>
     <description>Export selected worksheets to a single PDF.</description>
-    <author name="Sezer Bayrak" email="-" organization="-" />
-    <source-location>
-      <!-- ÖNEMLİ: HTML dosyanın jsDelivr URL'si -->
-      <url>https://cdn.jsdelivr.net/gh/Sbayra10/tableau-pdf-downloader-extension/pdfDownloader.html</url>
-    </source-location>
+
+    <author name="Sezer Bayrak" email="" organization="" />
+
+    <!-- HTML dosyanın barındığı HTTPS adres -->
+    <source-location url="https://cdn.jsdelivr.net/gh/Sbayra10/tableau-pdf-downloader-extension/pdfDownloader.html" />
+
     <permissions>
       <permission>full data</permission>
     </permissions>
+
+    <!-- exportPdfAsync için 1.7 ve üzeri gerekli -->
     <min-api-version>1.7</min-api-version>
   </dashboard-extension>
 </manifest>
